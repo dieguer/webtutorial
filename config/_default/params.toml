@@ -16,13 +16,13 @@
 theme = "starter-blog"
 
 # Enable users to switch between day and night mode?
-day_night = true
+day_night = false
 
 # Override the theme's font set (optional).
 #   Guide to font sets: https://wowchemy.com/docs/customization/#fonts
 #   Browse the latest built-in font sets at https://github.com/wowchemy/wowchemy-hugo-modules/tree/master/wowchemy/data/fonts
 #   Browse user installed font sets in `data/fonts/`
-font = ""
+font = "cyberpunk"
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
@@ -88,7 +88,7 @@ show_related = {post = true}
 ############################
 
 ## Enter contact details (optional). To hide a field, clear it to "".
-email = "test@example.org"
+email = "drojasb@emory.edu"
 #phone = "888 888 88 88"
 #
 ## Address

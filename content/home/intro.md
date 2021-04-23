@@ -8,11 +8,11 @@ headless: true
 # Order that this section will appear in.
 weight: 10
 
-title: ✏️ Blog Template
-subtitle: 'For [Wowchemy Website Builder](https://wowchemy.com/)'
+title: "Create your personal Website using Wowchemy and Github pages"
+subtitle: 'Data Science for Scientists ATL'
 
 design:
   background:
-    color: '#090a0b'
+    color: '#012169'
     text_color_light: true
 ---
