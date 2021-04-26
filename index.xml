@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Blog</title>
+    <link>https://dieguer.github.io/webtutorial/</link>
+      <atom:link href="https://dieguer.github.io/webtutorial/index.xml" rel="self" type="application/rss+xml" />
+    <description>My Blog</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 23 Apr 2021 00:00:02 +0000</lastBuildDate>
+    <image>
+      <url>https://dieguer.github.io/webtutorial/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>My Blog</title>
+      <link>https://dieguer.github.io/webtutorial/</link>
+    </image>
+    
+    <item>
+      <title>Step one: setup requirements and acquire the template</title>
+      <link>https://dieguer.github.io/webtutorial/post/step1/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:02 +0000</pubDate>
+      <guid>https://dieguer.github.io/webtutorial/post/step1/</guid>
+      <description>&lt;h2 id=&#34;about-this-tutorial&#34;&gt;About this tutorial&lt;/h2&gt;
+&lt;p&gt;This is the first part of the tutorial to create a website using
+&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;https://www.rstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt;. We
+are going to use a particular flavor of Hugo templates called
+&lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; (previosuly know as academic Hugo).&lt;/p&gt;
+&lt;p&gt;With Wowchemy, the default option is to deploy the site using a
+subscription based service called &lt;a href=&#34;https://www.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Netlify&lt;/a&gt;.
+The process is very well explained on their
+&lt;a href=&#34;https://wowchemy.com/docs/getting-started/install/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As advocates for free technology we are going to opt for a second way to
+modify and deploy your website using your own PC and &lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github
+Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this iteration we are going to proceed with the setup steps that you
+will have to do before actually modifying and deploying your website.&lt;/p&gt;
+&lt;h2 id=&#34;install-required-software&#34;&gt;Install Required software&lt;/h2&gt;
+&lt;h3 id=&#34;r-and-rstudio&#34;&gt;R and Rstudio&lt;/h3&gt;
+&lt;p&gt;In order to make your personal website you will first need to &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install
+R&lt;/a&gt; for your operating system. YOu will also
+need an installation of
+&lt;a href=&#34;https://www.rstudio.com/products/rstudio/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can follow the instructions in the following
+&lt;a href=&#34;https://campus.datacamp.com/courses/r-for-the-intimidated/introduction-to-course-and-rstudio?ex=3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;install-git&#34;&gt;Install git&lt;/h3&gt;
+&lt;p&gt;Depending on your OS you will need to install
+&lt;a href=&#34;https://git-scm.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;git&lt;/a&gt;. YOu can follow the instructions in the
+&lt;a href=&#34;https://www.datacamp.com/community/tutorials/git-setup&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;following
+page&lt;/a&gt;:&lt;/p&gt;
+&lt;h3 id=&#34;hugo-installation-os-dependent&#34;&gt;Hugo installation (OS dependent)&lt;/h3&gt;
+&lt;h4 id=&#34;windows&#34;&gt;Windows&lt;/h4&gt;
+&lt;p&gt;First install &lt;a href=&#34;https://scoop.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scoop&lt;/a&gt;. This is a package manager that
+works similar to the package managers in Linux.&lt;/p&gt;
+&lt;p&gt;Access Windows
+&lt;a href=&#34;https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Powershell&lt;/a&gt;
+and type:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser iwr -useb get.scoop.sh | iex
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Reply yes to the question: &lt;strong&gt;Do you want to change the execution
+policy?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Install Hugo and its dependencies by typing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;scoop install git go hugo-extended
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;macos&#34;&gt;MacOS&lt;/h4&gt;
+&lt;p&gt;Open the &lt;strong&gt;Terminal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Install &lt;a href=&#34;https://brew.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homebrew&lt;/a&gt;, the Mac package manager, by
+pasting the following command and pressing the Enter&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;update the repositories&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;brew update &amp;amp;&amp;amp; brew upgrade
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Install Hugo and its dependencies:&lt;/p&gt;
+&lt;p&gt;brew install git golang hugo&lt;/p&gt;
+&lt;p&gt;Open the hidden &lt;code&gt;~/.zshrc&lt;/code&gt; (or &lt;code&gt;~/.bashrc&lt;/code&gt;) file in a text editor, add
+the following line, and restart your Terminal app so that Hugo can find
+the location of its Go dependency.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export PATH=$PATH:/usr/local/go/bin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;linux&#34;&gt;Linux&lt;/h4&gt;
+&lt;p&gt;For Ubuntu based distributions&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt; the Hugo Extended
+installer for Debian (hugo_extended_&lt;VERSION&gt;_Linux-64bit.deb)&lt;/p&gt;
+&lt;p&gt;Open a terminal on the directory where you placed your installer and
+type&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo dpkg -i &amp;lt;path_to_deb_file&amp;gt;/hugo_extended_&amp;lt;VERSION&amp;gt;_Linux-64bit.deb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;download-a-template&#34;&gt;Download a template&lt;/h3&gt;
+&lt;p&gt;The provider &lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wowchemy&lt;/a&gt; has six different
+&lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;templates&lt;/a&gt; you can use:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://academic-demo.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic/Resumé&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugo-researcher.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Researcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://research-group.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Research Group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugo-blog-starter.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://book-starter.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Project Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://starter-hello-world.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hello World&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For this tutorial we are going to use the first.&lt;/p&gt;
+&lt;p&gt;To proceed go to the directory where you want to create your website
+using your file explorer and open a terminal. If you are using WIndows
+you should open a &lt;strong&gt;power shell&lt;/strong&gt;. Now download the template by typing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/wowchemy/starter-academic.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once you have cloned the repository, go to the location of the
+repository on the file typing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;your-path&amp;gt;/starter-academic
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can view the template by typing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If no errors are shown in the compilation you can paste the following on
+the address bar of your web browser:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://localhost:1313/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;setting-up-r-studio&#34;&gt;Setting up R-studio&lt;/h1&gt;
+&lt;p&gt;Stop the compilation by pressing &lt;code&gt;Crtl+c&lt;/code&gt;. Then go to your website
+folder by typing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;your-path&amp;gt;/starter-academic
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First you move the the &lt;code&gt;config.yaml&lt;/code&gt; of your project to the root folder
+by typing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mv ./config/_default/config.yaml .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now open RStudio and install the required package &lt;code&gt;blogdown&lt;/code&gt;. Type the
+following on the console.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;install.packages(&amp;quot;blogdown&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then using RStudio GUI open the project:
+&lt;your-path&gt;/starter-academic/academic.Rproj&lt;/p&gt;
+&lt;p&gt;To compile your site and preview it in RStudio type the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;blogdown:::serve_site()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Step two: customize and add content</title>
+      <link>https://dieguer.github.io/webtutorial/post/step2/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:01 +0000</pubDate>
+      <guid>https://dieguer.github.io/webtutorial/post/step2/</guid>
+      <description>&lt;h2 id=&#34;about-this-tutorial&#34;&gt;About this tutorial&lt;/h2&gt;
+&lt;h1 id=&#34;create-a-website-with-rstudio-modfying-your-website&#34;&gt;Create a Website with RStudio: Modfying your website&lt;/h1&gt;
+&lt;p&gt;This is the first part of the tutorial to create a website using
+&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;https://www.rstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt;. We
+are going to use a particular flavor of Hugo templates called
+&lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; (previosuly know as academic Hugo).&lt;/p&gt;
+&lt;p&gt;With Wowchemy, the default option is to deploy the site using a
+subscription based service called &lt;a href=&#34;https://www.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Netlify&lt;/a&gt;.
+The process is very well explained on their
+&lt;a href=&#34;https://wowchemy.com/docs/getting-started/install/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As advocates for free technology we are going to opt for a second way to
+modify and deploy your website using your own PC and &lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github
+Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this iteration we are going to proceed with the some of the most
+basic and common ways to modify your website.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-the-structure-of-the-website&#34;&gt;Understanding the structure of the website&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Step three: deploy your website</title>
+      <link>https://dieguer.github.io/webtutorial/post/step3/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://dieguer.github.io/webtutorial/post/step3/</guid>
+      <description>&lt;h2 id=&#34;about-this-tutorial&#34;&gt;About this tutorial&lt;/h2&gt;
+&lt;h1 id=&#34;create-a-website-with-rstudio-deploy-your-website&#34;&gt;Create a Website with RStudio: Deploy your website&lt;/h1&gt;
+&lt;p&gt;This is the first part of the tutorial to create a website using
+&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;https://www.rstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt;. We
+are going to use a particular flavor of Hugo templates called
+&lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; (previosuly know as academic Hugo).&lt;/p&gt;
+&lt;p&gt;With Wowchemy, the default option is to deploy the site using a
+subscription based service called &lt;a href=&#34;https://www.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Netlify&lt;/a&gt;.
+The process is very well explained on their
+&lt;a href=&#34;https://wowchemy.com/docs/getting-started/install/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As advocates for free technology we are going to opt for a second way to
+modify and deploy your website using your own PC and &lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github
+Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this iteration we are going to proceed with the some of the most
+basic and common ways to modify your website.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-github&#34;&gt;Setting up github&lt;/h2&gt;
+&lt;p&gt;First you will need to &lt;a href=&#34;https://github.com/login&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;log-in&lt;/a&gt; or &lt;a href=&#34;https://github.com/join&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;create a
+github account&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Next you will need to create an empty repository where you are going to
+save your local files from the website build. A detailed set on
+instructions to this is can be fund &lt;a href=&#34;https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this
+link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Once the &lt;strong&gt;empty&lt;/strong&gt; repo is created, with any name you like, for example
+&lt;strong&gt;tutorial_gs&lt;/strong&gt;, we are ready to copy the contents of your website to
+the repo.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First connect your local repository to the github repo.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open a terminal and navigate to the site of your website:
+&lt;code&gt;cd &amp;lt;your-path&amp;gt;/starter-academic&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;connect to the repo with the online repo by typing:
+&lt;code&gt;git remote set-url origin &amp;lt;YOUR_REPO_URL&amp;gt;.git&lt;/code&gt; For Example
+&lt;code&gt;git remote set-url origin https://github.com/tutorialgse/tutorial_gs.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;To verify the origin type: &lt;code&gt;git remote -v&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next you have to commit the changes you have made&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For this your global &lt;code&gt;user.name&lt;/code&gt; and &lt;code&gt;user.email&lt;/code&gt; should be
+configured already on your machine. You can check if that is the
+case with: &lt;code&gt;git config --list --show-origin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;if not set yet, you can use :
+&lt;code&gt;git config --global user.name &amp;quot;John Doe&amp;quot;&lt;/code&gt;
+&lt;code&gt;git config --global user.email johndoe@example.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;then add all the changes made to your repo by typing:
+&lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Now commit all the changes:
+&lt;code&gt;git commit -m &amp;quot;First commit on the web&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Push your repo to your new empty repo typing
+&lt;code&gt;git push origin master&lt;/code&gt; you will be asked for your credentials
+after this&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now we are going to create the second repo to host the page. For this to
+work you have to name the repo as follows &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt;. Where
+&lt;code&gt;&amp;lt;USERNAME&amp;gt;&lt;/code&gt; is the user name that you chose for your account. We will
+save the generated site to this repository.&lt;/p&gt;
+&lt;p&gt;In your &lt;code&gt;./config/_default/config.yaml&lt;/code&gt; file, set
+&lt;code&gt;baseurl = &amp;quot;https://&amp;lt;USERNAME&amp;gt;.github.io/&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Next remove the directory &lt;code&gt;./public&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We are going to create the submodule to populate our website deployment
+repository&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git submodule add -f -b master https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;deploy-your-site&#34;&gt;Deploy your site&lt;/h2&gt;
+&lt;p&gt;Generate the website again by typing on the console:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo
+cd publi
+git add .
+git commit -m &amp;quot;Build website&amp;quot;
+git push origin master
+cd ..
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After this, go to &lt;code&gt;&amp;quot;https://&amp;lt;USERNAME&amp;gt;.github.io/&amp;quot;&lt;/code&gt; and you should be
+able to see your website.&lt;/p&gt;
+&lt;h2 id=&#34;updating-your-site&#34;&gt;Updating your site&lt;/h2&gt;
+&lt;p&gt;To update your websites make your modifications as per the second
+tutorial. Then add and commit your changes&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;your-path&amp;gt;/starter-academic
+git add .
+git commit -m &amp;quot;update your website&amp;quot; 
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After that re-generate the website by typing:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;When the process is done, proceed to the &lt;code&gt;public/&lt;/code&gt; directory, then add,
+commit and push all changes.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;your-path&amp;gt;/starter-academic/public
+git add .
+git commit -m &amp;quot;update your website web repo&amp;quot; 
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After this, go to &lt;code&gt;&amp;quot;https://&amp;lt;USERNAME&amp;gt;.github.io/&amp;quot;&lt;/code&gt;, after a couple of
+minutes you should be able to see your website updated.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dieguer.github.io/webtutorial/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dieguer.github.io/webtutorial/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dieguer.github.io/webtutorial/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dieguer.github.io/webtutorial/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
