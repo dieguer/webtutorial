@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags | My Blog</title>
+    <link>https://dieguer.github.io/webtutorial/tags/</link>
+      <atom:link href="https://dieguer.github.io/webtutorial/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 23 Apr 2021 00:00:02 +0000</lastBuildDate>
+    <image>
+      <url>https://dieguer.github.io/webtutorial/images/icon_hu539b2dd2a9c1717ac6be8f2adb9afed8_36282_512x512_fill_lanczos_center_2.png</url>
+      <title>Tags</title>
+      <link>https://dieguer.github.io/webtutorial/tags/</link>
+    </image>
+    
+  </channel>
+</rss>
